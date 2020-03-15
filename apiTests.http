@@ -1,0 +1,77 @@
+### Test hello world
+GET http://localhost:8080/products/
+
+###
+GET http://localhost:8080/products/2
+
+###
+POST http://localhost:8080/products HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Bike",
+    "price": 180
+}
+
+### Delete succesfully
+DELETE http://localhost:8080/products/6
+
+//////////////////////////////////////
+
+### Test get all categories
+GET http://localhost:8080/api/categories/
+
+### Test get one  category
+GET http://localhost:8080/api/category/5
+
+### Test get all expenses
+GET http://localhost:8080/api/expenses/
+
+
+### Delete succesfully
+DELETE http://localhost:8080/api/expenses/101
+
+/
+### Test get one expense
+GET http://localhost:8080/api/expenses/102
+
+### Test 
+GET http://localhost:8080/api/expenses/
+
+
+###
+POST http://localhost:8080/api/category HTTP/1.1
+content-type: application/json
+
+{
+    "id": 8,
+    "name": "Vegetables2"
+}
+
+###
+PUT http://localhost:8080/api/category HTTP/1.1
+content-type: application/json
+
+{
+    "id": 5,
+    "name": "Vegetables5"
+}
+
+### Test hello world
+DELETE http://localhost:8080/api/category/6
+
+
+###
+POST http://localhost:8080/api/expenses HTTP/1.1
+content-type: application/json
+
+{
+  "id": 0,
+  "expenseDate": "2019-06-16T17:00:00Z",
+  "description": "Spiderman movie",
+  "location": "Helsinki",
+  "gategory": {
+    "id": 3,
+    "name": "Movies"
+  }
+}
